@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.nie.steel_material_server.mapper.rolled_steel_test_mapper">
+    <select id="findByPage" resultType="com.nie.steel_material_server.entity.rolled_steel_test">
+        SELECT * FROM rolled_steel_test limit #{startPage} , #{pageSize}
+    </select>
+    <select id="getPage" resultType="int">
+        SELECT COUNT(*) FROM rolled_steel_test
+    </select>
+    <select id="deleteById">
+        DELETE FROM rolled_steel_test WHERE id = #{id}
+    </select>
+    <select id="addData" parameterType="com.nie.steel_material_server.entity.rolled_steel_test">
+        INSERT INTO rolled_steel_test (x31,x32,x33,x34,x35,x36) VALUES (#{x31},#{x32},#{x33},#{x34},#{x35},#{x36})
+    </select>
+    <select id="findAll" resultType="com.nie.steel_material_server.entity.rolled_steel_test">
+        SELECT * FROM rolled_steel_test
+    </select>
+</mapper>
