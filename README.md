@@ -13,7 +13,7 @@
     <img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="license">
 </a>
 
-使用Spring Boot的管理系统项目。[体验地址](https://81.70.243.180)
+使用Spring Boot的管理系统项目。[体验地址](http://81.70.243.180)
 
 [前端项目地址](https://github.com/Ni3RaN/steel_material_client)
 
