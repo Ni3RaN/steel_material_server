@@ -19,7 +19,7 @@
 
 ## 前言
 
-该项目是钢材综合成材率预测系统的后端（使用 Spring Boot和Mybatis），数据库是Mysql5.7，数据库连接池是druid）。
+该项目是钢材综合成材率预测系统的后端（使用 Spring Boot和Mybatis），数据库是Mysql8.0.28，数据库连接池是druid）。
 
 ## 接口
 
