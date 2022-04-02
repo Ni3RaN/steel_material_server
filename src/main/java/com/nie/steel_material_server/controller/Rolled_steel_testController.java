@@ -8,12 +8,15 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
 import java.util.List;
 
 @RestController
 @RequestMapping("/get_rolled_steel_test")
 @CrossOrigin
 public class Rolled_steel_testController {
+
+    private String pythonFilePath = "/home/steel_material/py/main.py";
 
     @Autowired
     private rolled_steel_testService rolled_steel_testService;
@@ -35,8 +38,9 @@ public class Rolled_steel_testController {
     }
 
     @RequestMapping("addData")
-    public void addData(@RequestBody rolled_steel_test rolled_steel_test){
+    public void addData(@RequestBody rolled_steel_test rolled_steel_test) throws IOException {
         rolled_steel_testService.addData(rolled_steel_test);
+        Runtime.getRuntime().exec("python " + pythonFilePath);
     }
 
     @RequestMapping("findAll")
